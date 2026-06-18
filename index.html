@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Fit By Tania | High Performance Training</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#131313",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "on-tertiary-fixed-variant": "#93000a",
+                        "on-primary-container": "#556d00",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed-variant": "#474746",
+                        "surface-container-high": "#2a2a2a",
+                        "on-surface": "#e5e2e1",
+                        "border-gray": "#2D2D2D",
+                        "secondary": "#c8c6c5",
+                        "on-surface-variant": "#c4c9ac",
+                        "secondary-fixed": "#e5e2e1",
+                        "surface-container-highest": "#353534",
+                        "deep-charcoal": "#0F0F0F",
+                        "gymshark-red": "#E2101B",
+                        "secondary-container": "#474746",
+                        "on-tertiary-container": "#cb0013",
+                        "primary": "#ffffff",
+                        "surface-bright": "#3a3939",
+                        "surface-container": "#201f1f",
+                        "primary-container": "#c3f400",
+                        "on-secondary": "#313030",
+                        "on-primary-fixed-variant": "#3c4d00",
+                        "pure-white": "#FFFFFF",
+                        "on-secondary-container": "#b7b5b4",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#abd600",
+                        "outline-variant": "#444933",
+                        "inverse-on-surface": "#313030",
+                        "primary-fixed": "#c3f400",
+                        "surface-dim": "#131313",
+                        "background": "#131313",
+                        "on-background": "#e5e2e1",
+                        "on-primary-fixed": "#161e00",
+                        "inverse-primary": "#506600",
+                        "tertiary-container": "#ffdad6",
+                        "surface-container-low": "#1c1b1b",
+                        "tertiary-fixed-dim": "#ffb4ab",
+                        "surface-gray": "#1F1F1F",
+                        "outline": "#8e9379",
+                        "error-container": "#93000a",
+                        "on-tertiary-fixed": "#410002",
+                        "on-error": "#690005",
+                        "tertiary-fixed": "#ffdad6",
+                        "tertiary": "#ffffff",
+                        "surface-variant": "#353534",
+                        "neon-lime": "#CCFF00",
+                        "surface-tint": "#abd600",
+                        "inverse-surface": "#e5e2e1",
+                        "on-primary": "#283500",
+                        "on-tertiary": "#690005",
+                        "secondary-fixed-dim": "#c8c6c5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "display-lg": [
+                            "Montserrat"
+                        ],
+                        "headline-md": [
+                            "Montserrat"
+                        ],
+                        "body-lg": [
+                            "Inter"
+                        ],
+                        "body-md": [
+                            "Inter"
+                        ],
+                        "label-sm": [
+                            "Inter"
+                        ],
+                        "label-bold": [
+                            "Inter"
+                        ],
+                        "headline-xl-mobile": [
+                            "Montserrat"
+                        ],
+                        "display-lg-mobile": [
+                            "Montserrat"
+                        ],
+                        "headline-xl": [
+                            "Montserrat"
+                        ]
+                    },
+                    "fontSize": {
+                        "display-lg": [
+                            "64px",
+                            {
+                                "lineHeight": "72px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "headline-md": [
+                            "24px",
+                            {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "body-lg": [
+                            "18px",
+                            {
+                                "lineHeight": "28px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "body-md": [
+                            "16px",
+                            {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                            }
+                        ],
+                        "label-sm": [
+                            "12px",
+                            {
+                                "lineHeight": "16px",
+                                "fontWeight": "500"
+                            }
+                        ],
+                        "label-bold": [
+                            "14px",
+                            {
+                                "lineHeight": "20px",
+                                "letterSpacing": "0.05em",
+                                "fontWeight": "600"
+                            }
+                        ],
+                        "headline-xl-mobile": [
+                            "32px",
+                            {
+                                "lineHeight": "40px",
+                                "fontWeight": "700"
+                            }
+                        ],
+                        "display-lg-mobile": [
+                            "40px",
+                            {
+                                "lineHeight": "48px",
+                                "letterSpacing": "-0.01em",
+                                "fontWeight": "800"
+                            }
+                        ],
+                        "headline-xl": [
+                            "40px",
+                            {
+                                "lineHeight": "48px",
+                                "fontWeight": "700"
+                            }
+                        ]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+
+        /* Container that dictates how long the scroll animation lasts */
+        .scroll-sequence-container {
+            height: 400vh;
+            position: relative;
+            background-color: #000;
+        }
+
+        /* The sticky element that stays in view while we scroll through the container */
+        .sticky-canvas-wrapper {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #animation-canvas {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            display: block;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Scroll Reveal Classes */
+        .reveal-slide {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal-blur {
+            opacity: 0;
+            filter: blur(10px);
+            transition: opacity 1s ease-out, filter 1s ease-out;
+        }
+        .reveal-visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            filter: blur(0) !important;
+        }
+
+        /* Blockbuster Title Animation */
+        @keyframes cinematic-title-reveal {
+            0% {
+                opacity: 0;
+                filter: blur(15px);
+                letter-spacing: normal;
+            }
+            100% {
+                opacity: 1;
+                filter: blur(0);
+                letter-spacing: 0.25em;
+            }
+        }
+        .animate-cinematic-title {
+            animation: cinematic-title-reveal 1.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-neon-lime selection:text-deep-charcoal relative">
+
+    <!-- Ambient Side Glows -->
+    <div class="fixed top-1/4 -left-32 w-64 h-96 bg-neon-lime rounded-full pointer-events-none z-0 animate-pulse mix-blend-screen hidden lg:block opacity-10" style="filter: blur(100px);"></div>
+    <div class="fixed bottom-1/4 -right-32 w-64 h-96 bg-[#1a4a75] rounded-full pointer-events-none z-0 animate-pulse mix-blend-screen hidden lg:block opacity-20" style="filter: blur(100px);"></div>
+
+    <!-- Left Side Accent (Socials & Film Strip) -->
+    <div class="fixed left-6 top-0 bottom-0 hidden lg:flex flex-col justify-center items-center z-40 pointer-events-none">
+        <div class="h-1/3 border-l-2 border-dashed border-white/20"></div>
+        <div class="flex flex-col gap-12 my-8 pointer-events-auto">
+            <a href="#" class="text-on-surface-variant hover:text-neon-lime font-label-bold text-xs uppercase tracking-[0.3em] transition-colors duration-300" style="writing-mode: vertical-rl; transform: rotate(180deg);">Instagram</a>
+            <a href="#" class="text-on-surface-variant hover:text-neon-lime font-label-bold text-xs uppercase tracking-[0.3em] transition-colors duration-300" style="writing-mode: vertical-rl; transform: rotate(180deg);">YouTube</a>
+        </div>
+        <div class="h-1/3 border-l-2 border-dashed border-white/20"></div>
+    </div>
+
+    <!-- Right Side Accent (Contact Number) -->
+    <div class="fixed right-6 top-0 bottom-0 hidden lg:flex flex-col justify-center items-center z-40 pointer-events-auto">
+        <a href="https://wa.me/447724058823" target="_blank" class="text-on-surface-variant hover:text-neon-lime font-label-bold text-sm uppercase tracking-[0.4em] transition-colors duration-300" style="writing-mode: vertical-rl;">
+            +44 7724 058823
+        </a>
+    </div>
+
+    <!-- TopNavBar (Vanilla Translated from React) -->
+    <nav class="fixed top-0 left-0 right-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/10 max-w-full">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            
+            <!-- LOGO -->
+            <div class="text-white font-black tracking-widest text-xl cursor-pointer select-none transition-transform duration-200 active:scale-95" onclick="scrollToTop()">
+                FIT BY <span class="text-[#CCFF02]">TANIA</span>
+            </div>
+
+            <!-- DESKTOP MENU -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#programs" class="nav-link relative pb-2 font-medium tracking-wide text-sm transition-colors duration-300 text-neutral-400 hover:text-white">
+                    Programs
+                    <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-[#CCFF02] opacity-0 transition-opacity duration-300"></span>
+                </a>
+                <a href="#testimonials" class="nav-link relative pb-2 font-medium tracking-wide text-sm transition-colors duration-300 text-neutral-400 hover:text-white">
+                    Success Stories
+                    <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-[#CCFF02] opacity-0 transition-opacity duration-300"></span>
+                </a>
+                <a href="#pricing" class="nav-link relative pb-2 font-medium tracking-wide text-sm transition-colors duration-300 text-neutral-400 hover:text-white">
+                    Pricing
+                    <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-[#CCFF02] opacity-0 transition-opacity duration-300"></span>
+                </a>
+                <a href="#about" class="nav-link relative pb-2 font-medium tracking-wide text-sm transition-colors duration-300 text-neutral-400 hover:text-white">
+                    About
+                    <span class="nav-indicator absolute bottom-0 left-0 w-full h-[2px] bg-[#CCFF02] opacity-0 transition-opacity duration-300"></span>
+                </a>
+            </div>
+
+            <!-- MOBILE HAMBURGER BUTTON -->
+            <div class="md:hidden flex items-center">
+                <button onclick="toggleMobileMenu()" class="text-[#CCFF02] hover:text-white p-2 focus:outline-none z-50 transition-transform duration-300" aria-label="Toggle Menu">
+                    <div id="hamburger-icon" class="w-6 h-5 flex flex-col justify-between relative">
+                        <span id="bar-1" class="w-full h-[2px] bg-[#CCFF02] rounded transition-all duration-300 origin-left"></span>
+                        <span id="bar-2" class="w-full h-[2px] bg-[#CCFF02] rounded transition-all duration-300"></span>
+                        <span id="bar-3" class="w-full h-[2px] bg-[#CCFF02] rounded transition-all duration-300 origin-left"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- MOBILE DROPDOWN OVERLAY MENU -->
+        <div id="mobile-menu" class="fixed inset-x-0 top-20 bg-black/95 backdrop-blur-xl border-b border-white/10 md:hidden transition-all duration-500 ease-in-out transform origin-top opacity-0 scale-y-0 invisible">
+            <div class="px-6 py-8 flex flex-col space-y-6 items-center">
+                <a href="#programs" onclick="toggleMobileMenu()" class="nav-link-mobile text-xl font-bold uppercase tracking-widest relative pb-1 transition-colors duration-300 text-neutral-400">
+                    Programs
+                    <span class="nav-indicator-mobile absolute bottom-0 left-0 w-full h-[2px] bg-[#CCFF02] opacity-0 transition-opacity duration-300"></span>
+                </a>
+                <a href="#testimonials" onclick="toggleMobileMenu()" class="nav-link-mobile text-xl font-bold uppercase tracking-widest relative pb-1 transition-colors duration-300 text-neutral-400">
+                    Success Stories
+                    <span class="nav-indicator-mobile absolute bottom-0 left-0 w-full h-[2px] bg-[#CCFF02] opacity-0 transition-opacity duration-300"></span>
+                </a>
+                <a href="#pricing" onclick="toggleMobileMenu()" class="nav-link-mobile text-xl font-bold uppercase tracking-widest relative pb-1 transition-colors duration-300 text-neutral-400">
+                    Pricing
+                    <span class="nav-indicator-mobile absolute bottom-0 left-0 w-full h-[2px] bg-[#CCFF02] opacity-0 transition-opacity duration-300"></span>
+                </a>
+                <a href="#about" onclick="toggleMobileMenu()" class="nav-link-mobile text-xl font-bold uppercase tracking-widest relative pb-1 transition-colors duration-300 text-neutral-400">
+                    About
+                    <span class="nav-indicator-mobile absolute bottom-0 left-0 w-full h-[2px] bg-[#CCFF02] opacity-0 transition-opacity duration-300"></span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Animation Section (Replaces Hero) -->
+    <div class="scroll-sequence-container pt-20"> <!-- pt-20 to account for navbar initially -->
+        <div class="sticky-canvas-wrapper">
+            <canvas id="animation-canvas"></canvas>
+            <div
+                class="absolute inset-0 flex flex-col justify-center items-center pointer-events-none z-10 bg-black/75 px-4">
+                <h1
+                    class="font-headline-xl-mobile md:font-display-lg text-headline-xl-mobile md:text-display-lg text-pure-white leading-tight mb-2 drop-shadow-2xl text-center uppercase font-bold tracking-normal opacity-0 animate-cinematic-title">
+                    REACH YOUR PEAK FITNESS
+                </h1>
+                <div class="h-10 md:h-12 flex items-center justify-center overflow-hidden w-full relative reveal-slide" style="transition-delay: 400ms;">
+                    <p id="dynamic-text"
+                        class="font-body-lg md:text-2xl text-neon-lime text-center drop-shadow-lg font-semibold tracking-wider uppercase m-0 absolute transform transition-all duration-1000 ease-in-out scale-90 blur-sm opacity-0">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Row -->
+    <section class="py-16 bg-surface-gray border-y border-border-gray relative z-20">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div
+                class="grid grid-cols-1 md:grid-cols-3 gap-gutter text-center divide-y md:divide-y-0 md:divide-x divide-border-gray">
+                <div class="flex flex-col space-y-2 py-4 md:py-0">
+                    <span
+                        class="font-headline-md md:font-headline-xl text-headline-md md:text-headline-xl text-neon-lime">10k+</span>
+                    <span
+                        class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Clients
+                        Transformed</span>
+                </div>
+                <div class="flex flex-col space-y-2 py-4 md:py-0">
+                    <span
+                        class="font-headline-md md:font-headline-xl text-headline-md md:text-headline-xl text-pure-white">10+</span>
+                    <span
+                        class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Years
+                        Experience</span>
+                </div>
+                <div class="flex flex-col space-y-2 py-4 md:py-0">
+                    <span
+                        class="font-headline-md md:font-headline-xl text-headline-md md:text-headline-xl text-pure-white">100%</span>
+                    <span
+                        class="font-label-bold text-label-bold text-on-surface-variant uppercase tracking-widest">Customized
+                        Plans</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="programs" class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-20">
+        <div class="text-center mb-16">
+            <h2
+                class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-pure-white mb-4">
+                Elite Services</h2>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mx-auto">Precision-engineered programs
+                to maximize your strength, endurance, and overall performance.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+            <!-- Card 1 -->
+            <div
+                class="bg-surface-gray p-8 rounded-lg border border-border-gray hover:border-neon-lime transition-colors duration-300 group flex flex-col items-start h-full reveal-slide" style="transition-delay: 100ms;">
+                <div
+                    class="w-14 h-14 bg-deep-charcoal rounded-DEFAULT flex items-center justify-center mb-6 group-hover:bg-neon-lime transition-colors duration-300">
+                    <span class="material-symbols-outlined text-neon-lime group-hover:text-deep-charcoal"
+                        style="font-size: 32px;">fitness_center</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-pure-white mb-4">1-on-1 Personal Training</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Experience elite coaching
+                    tailored specifically to your biomechanics and goals. Uncompromising attention to detail.</p>
+                <a class="font-label-bold text-label-bold text-neon-lime inline-flex items-center hover:text-white transition-colors"
+                    href="#">
+                    Learn More <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <!-- Card 2 -->
+            <div
+                class="bg-surface-gray p-8 rounded-lg border border-border-gray hover:border-neon-lime transition-colors duration-300 group flex flex-col items-start h-full reveal-slide" style="transition-delay: 300ms;">
+                <div
+                    class="w-14 h-14 bg-deep-charcoal rounded-DEFAULT flex items-center justify-center mb-6 group-hover:bg-neon-lime transition-colors duration-300">
+                    <span class="material-symbols-outlined text-neon-lime group-hover:text-deep-charcoal"
+                        style="font-size: 32px;">restaurant_menu</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-pure-white mb-4">Custom Diet &amp; Nutrition Plans
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Science-based nutrition
+                    strategies designed to fuel your workouts and accelerate recovery without sacrificing taste.</p>
+                <a class="font-label-bold text-label-bold text-neon-lime inline-flex items-center hover:text-white transition-colors"
+                    href="#">
+                    Learn More <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                </a>
+            </div>
+            <!-- Card 3 -->
+            <div
+                class="bg-surface-gray p-8 rounded-lg border border-border-gray hover:border-neon-lime transition-colors duration-300 group flex flex-col items-start h-full reveal-slide" style="transition-delay: 500ms;">
+                <div
+                    class="w-14 h-14 bg-deep-charcoal rounded-DEFAULT flex items-center justify-center mb-6 group-hover:bg-neon-lime transition-colors duration-300">
+                    <span class="material-symbols-outlined text-neon-lime group-hover:text-deep-charcoal"
+                        style="font-size: 32px;">groups</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-pure-white mb-4">Online Group Coaching</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-6">Join a community of driven
+                    individuals. High-energy, expertly programmed workouts you can do anywhere.</p>
+                <a class="font-label-bold text-label-bold text-neon-lime inline-flex items-center hover:text-white transition-colors"
+                    href="#">
+                    Learn More <span class="material-symbols-outlined ml-1 text-sm">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-20 reveal-blur">
+        <div class="bg-surface-gray border border-border-gray p-8 md:p-16 rounded-xl text-center max-w-4xl mx-auto shadow-2xl">
+            <h2 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-pure-white mb-6 uppercase tracking-wider">
+                About the Coach
+            </h2>
+            <p class="font-body-md md:font-body-lg text-body-md md:text-body-lg text-on-surface-variant leading-relaxed">
+                Transforming lives through elite, result-driven fitness coaching. With years of digital media and physical training experience, I specialize in crafting custom, high-performance workout and nutrition programs tailored to your unique lifestyle. No fads, no shortcuts—just pure, science-backed strength and elite performance.
+            </p>
+        </div>
+    </section>
+
+    <!-- Success Stories Section -->
+    <section id="testimonials" class="py-32 bg-surface border-y border-border-gray relative z-20 reveal-blur">
+        <div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+            <div class="text-center mb-16">
+                <h2
+                    class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-pure-white mb-4">
+                    Real Results, Real People</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+                <!-- Transformation Card 1 -->
+                <div class="bg-surface-gray p-6 rounded-lg border border-border-gray flex flex-col h-full">
+                    <div
+                        class="w-full aspect-video bg-deep-charcoal rounded-DEFAULT mb-6 flex items-center justify-center text-on-surface-variant font-label-bold uppercase tracking-widest border border-border-gray border-dashed">
+                        Before / After Photo
+                    </div>
+                    <div class="flex text-neon-lime mb-4">
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant italic flex-grow">"Apex changed my life.
+                        I've never felt stronger. The personalized plan was exactly what I needed to break through my
+                        plateau."</p>
+                    <div class="mt-6 font-label-bold text-label-bold text-pure-white">— Sarah M.</div>
+                </div>
+                <!-- Transformation Card 2 -->
+                <div class="bg-surface-gray p-6 rounded-lg border border-border-gray flex flex-col h-full">
+                    <div
+                        class="w-full aspect-video bg-deep-charcoal rounded-DEFAULT mb-6 flex items-center justify-center text-on-surface-variant font-label-bold uppercase tracking-widest border border-border-gray border-dashed">
+                        Before / After Photo
+                    </div>
+                    <div class="flex text-neon-lime mb-4">
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant italic flex-grow">"The coaches at Fit By Tania
+                        push you beyond your limits safely. The community and the energy are unmatched."</p>
+                    <div class="mt-6 font-label-bold text-label-bold text-pure-white">— James R.</div>
+                </div>
+                <!-- Transformation Card 3 -->
+                <div class="bg-surface-gray p-6 rounded-lg border border-border-gray flex flex-col h-full">
+                    <div
+                        class="w-full aspect-video bg-deep-charcoal rounded-DEFAULT mb-6 flex items-center justify-center text-on-surface-variant font-label-bold uppercase tracking-widest border border-border-gray border-dashed">
+                        Before / After Photo
+                    </div>
+                    <div class="flex text-neon-lime mb-4">
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                        <span class="material-symbols-outlined" style="font-size: 20px;">star</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant italic flex-grow">"I finally learned how
+                        to eat right for my goals without giving up the foods I love. Incredible experience."</p>
+                    <div class="mt-6 font-label-bold text-label-bold text-pure-white">— Elena K.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Plan Section -->
+    <section id="pricing" class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto relative z-20">
+        <div class="text-center mb-16">
+            <h2
+                class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-pure-white mb-4">
+                Choose Your Path to Peak Performance</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+            <!-- Basic Plan -->
+            <div class="bg-surface-gray p-8 rounded-lg border border-border-gray flex flex-col h-full reveal-slide" style="transition-delay: 100ms;">
+                <h3 class="font-headline-md text-headline-md text-pure-white mb-2">Basic</h3>
+                <div class="font-display-lg text-display-lg text-pure-white mb-8">$49<span
+                        class="text-body-md text-on-surface-variant">/mo</span></div>
+                <ul class="space-y-4 mb-8 flex-grow">
+                    <li class="flex items-center text-on-surface-variant font-body-md text-body-md"><span
+                            class="material-symbols-outlined text-neon-lime mr-3">check</span> Full Gym Access</li>
+                    <li class="flex items-center text-on-surface-variant font-body-md text-body-md"><span
+                            class="material-symbols-outlined text-neon-lime mr-3">check</span> General Workout Plans
+                    </li>
+                    <li class="flex items-center text-on-surface-variant font-body-md text-body-md"><span
+                            class="material-symbols-outlined text-neon-lime mr-3">check</span> Standard Support</li>
+                </ul>
+                <a class="w-full text-center border border-border-gray text-pure-white font-label-bold text-label-bold px-6 py-4 rounded-DEFAULT hover:border-neon-lime hover:text-neon-lime transition-colors duration-300"
+                    href="https://wa.me/447724058823" target="_blank">Select Basic</a>
+            </div>
+            <!-- Pro Coaching Plan -->
+            <div
+                class="bg-neon-lime p-8 rounded-lg border border-neon-lime flex flex-col h-full relative transform shadow-2xl z-10 md:-translate-y-4 reveal-slide" style="transition-delay: 300ms;">
+                <div
+                    class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-deep-charcoal text-neon-lime px-4 py-1 rounded-full font-label-bold text-[10px] uppercase tracking-wider">
+                    Most Popular</div>
+                <h3 class="font-headline-md text-headline-md text-deep-charcoal mb-2">Pro Coaching</h3>
+                <div class="font-display-lg text-display-lg text-deep-charcoal mb-8">$99<span
+                        class="text-body-md text-deep-charcoal/70">/mo</span></div>
+                <ul class="space-y-4 mb-8 flex-grow">
+                    <li class="flex items-center text-deep-charcoal font-body-md text-body-md font-bold"><span
+                            class="material-symbols-outlined mr-3">check</span> Weekly Check-ins</li>
+                    <li class="flex items-center text-deep-charcoal font-body-md text-body-md font-bold"><span
+                            class="material-symbols-outlined mr-3">check</span> Personalized Meal Plans</li>
+                    <li class="flex items-center text-deep-charcoal font-body-md text-body-md font-bold"><span
+                            class="material-symbols-outlined mr-3">check</span> Customized Workouts</li>
+                    <li class="flex items-center text-deep-charcoal font-body-md text-body-md font-bold"><span
+                            class="material-symbols-outlined mr-3">check</span> Full Gym Access</li>
+                </ul>
+                <a class="w-full text-center bg-deep-charcoal text-neon-lime font-label-bold text-label-bold px-6 py-4 rounded-DEFAULT hover:bg-white hover:text-deep-charcoal transition-colors duration-300 shadow-lg"
+                    href="https://wa.me/447724058823" target="_blank">Start Pro Coaching</a>
+            </div>
+            <!-- Elite Plan -->
+            <div class="bg-surface-gray p-8 rounded-lg border border-border-gray flex flex-col h-full reveal-slide" style="transition-delay: 500ms;">
+                <h3 class="font-headline-md text-headline-md text-pure-white mb-2">Elite</h3>
+                <div class="font-display-lg text-display-lg text-pure-white mb-8">$199<span
+                        class="text-body-md text-on-surface-variant">/mo</span></div>
+                <ul class="space-y-4 mb-8 flex-grow">
+                    <li class="flex items-center text-on-surface-variant font-body-md text-body-md"><span
+                            class="material-symbols-outlined text-neon-lime mr-3">check</span> 24/7 Priority Support
+                    </li>
+                    <li class="flex items-center text-on-surface-variant font-body-md text-body-md"><span
+                            class="material-symbols-outlined text-neon-lime mr-3">check</span> Daily Check-ins</li>
+                    <li class="flex items-center text-on-surface-variant font-body-md text-body-md"><span
+                            class="material-symbols-outlined text-neon-lime mr-3">check</span> 1-on-1 Coaching Sessions
+                    </li>
+                    <li class="flex items-center text-on-surface-variant font-body-md text-body-md"><span
+                            class="material-symbols-outlined text-neon-lime mr-3">check</span> All Pro Features</li>
+                </ul>
+                <a class="w-full text-center border border-border-gray text-pure-white font-label-bold text-label-bold px-6 py-4 rounded-DEFAULT hover:border-neon-lime hover:text-neon-lime transition-colors duration-300"
+                    href="https://wa.me/447724058823" target="_blank">Select Elite</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-deep-charcoal border-t border-border-gray w-full py-stack-lg relative z-20">
+        <div
+            class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto space-y-6 md:space-y-0">
+            <div class="font-headline-md text-headline-md text-primary">
+                Fit By Tania
+            </div>
+            <div class="flex flex-wrap justify-center gap-6">
+                <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-neon-lime transition-colors"
+                    href="#">Privacy Policy</a>
+                <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-neon-lime transition-colors"
+                    href="#">Terms of Service</a>
+                <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-neon-lime transition-colors"
+                    href="#">Contact Us</a>
+                <a class="font-body-md text-body-md text-secondary-fixed-dim hover:text-neon-lime transition-colors"
+                    href="#">Careers</a>
+            </div>
+            <div class="font-label-sm text-label-sm text-secondary-fixed-dim">
+                © 2024 Fit By Tania. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const canvas = document.getElementById('animation-canvas');
+        const context = canvas.getContext('2d');
+
+        // Number of frames in your folder
+        const frameCount = 160;
+
+        // Function to get the path of a given frame
+        const currentFrame = index => (
+            `ezgif-49f6db12204ca778-jpg/ezgif-frame-${index.toString().padStart(3, '0')}.jpg`
+        )
+
+        // Preload all images to ensure smooth playback
+        const images = [];
+        let imagesLoaded = 0;
+
+        // Initial setup for the canvas size to match window
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+
+        const img = new Image();
+        img.src = currentFrame(1);
+
+        // Draw the first frame as soon as it loads
+        img.onload = function () {
+            context.drawImage(img, 0, 0, canvas.width, canvas.height);
+        }
+
+        // Loop through and preload all images
+        for (let i = 1; i <= frameCount; i++) {
+            const preloadImg = new Image();
+            preloadImg.src = currentFrame(i);
+            images.push(preloadImg);
+        }
+
+        // Handle window resize to keep canvas full screen
+        window.addEventListener('resize', () => {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            // The scroll handler will redraw on next scroll, but we can also force a redraw here
+            handleScroll();
+        });
+
+        const updateImage = index => {
+            if (images[index - 1] && images[index - 1].complete) {
+                const hRatio = canvas.width / images[index - 1].width;
+                const vRatio = canvas.height / images[index - 1].height;
+                const ratio = Math.max(hRatio, vRatio);
+                const centerShift_x = (canvas.width - images[index - 1].width * ratio) / 2;
+                const centerShift_y = (canvas.height - images[index - 1].height * ratio) / 2;
+
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.drawImage(images[index - 1], 0, 0, images[index - 1].width, images[index - 1].height,
+                    centerShift_x, centerShift_y, images[index - 1].width * ratio, images[index - 1].height * ratio);
+            }
+        }
+
+        const handleScroll = () => {
+            const container = document.querySelector('.scroll-sequence-container');
+            const rect = container.getBoundingClientRect();
+
+            let scrollFraction = 0;
+            const maxScroll = container.offsetHeight - window.innerHeight;
+
+            // Calculate fraction based on container's position relative to viewport top
+            if (rect.top <= 0) {
+                scrollFraction = -rect.top / maxScroll;
+            }
+
+            scrollFraction = Math.max(0, Math.min(1, scrollFraction));
+
+            const frameIndex = Math.min(
+                frameCount - 1,
+                Math.floor(scrollFraction * frameCount)
+            );
+
+            requestAnimationFrame(() => updateImage(frameIndex + 1));
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Blur and Scale effect logic
+        const phrases = [
+            "BUILD LASTING STRENGTH",
+            "ACHIEVE ELITE PERFORMANCE"
+        ];
+        let currentPhraseIndex = 0;
+
+        const dynamicTextElement = document.getElementById('dynamic-text');
+
+        function rackFocusOut() {
+            // Blur out and fade out (no scaling or moving)
+            dynamicTextElement.classList.remove('blur-none', 'opacity-100');
+            dynamicTextElement.classList.add('blur-md', 'opacity-0');
+
+            setTimeout(() => {
+                // Next phrase
+                currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+                dynamicTextElement.textContent = phrases[currentPhraseIndex];
+
+                // Force browser reflow
+                void dynamicTextElement.offsetWidth;
+
+                // Remove blur, and fade in (no scaling)
+                dynamicTextElement.classList.remove('blur-md', 'opacity-0');
+                dynamicTextElement.classList.add('blur-none', 'opacity-100');
+
+                // Wait 3.5s then transition out again
+                setTimeout(rackFocusOut, 3500);
+            }, 1000); // Wait for the 1000ms duration animation to finish
+        }
+
+        // Initial start
+        dynamicTextElement.textContent = phrases[currentPhraseIndex];
+        setTimeout(() => {
+            dynamicTextElement.classList.remove('blur-md', 'opacity-0');
+            dynamicTextElement.classList.add('blur-none', 'opacity-100');
+            setTimeout(rackFocusOut, 3500);
+        }, 100);
+
+        // Mobile Menu Toggle Logic
+        let isMenuOpen = false;
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const bar1 = document.getElementById('bar-1');
+            const bar2 = document.getElementById('bar-2');
+            const bar3 = document.getElementById('bar-3');
+            
+            isMenuOpen = !isMenuOpen;
+            
+            if (isMenuOpen) {
+                // Open menu
+                menu.classList.remove('opacity-0', 'scale-y-0', 'invisible');
+                menu.classList.add('opacity-100', 'scale-y-100', 'visible');
+                // Animate hamburger to X
+                bar1.classList.add('rotate-45', 'translate-x-[2px]', '-translate-y-[1px]');
+                bar2.classList.add('opacity-0', 'scale-0');
+                bar3.classList.add('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+            } else {
+                // Close menu
+                menu.classList.remove('opacity-100', 'scale-y-100', 'visible');
+                menu.classList.add('opacity-0', 'scale-y-0', 'invisible');
+                // Animate X back to hamburger
+                bar1.classList.remove('rotate-45', 'translate-x-[2px]', '-translate-y-[1px]');
+                bar2.classList.remove('opacity-0', 'scale-0');
+                bar3.classList.remove('-rotate-45', 'translate-x-[2px]', 'translate-y-[1px]');
+            }
+        }
+
+        // Scroll Reveal Animations Observer
+        document.addEventListener("DOMContentLoaded", () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.15
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('reveal-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+            document.querySelectorAll('.reveal-slide, .reveal-blur').forEach((el) => {
+                observer.observe(el);
+            });
+
+            // Navbar Scroll-Spy Logic (React Translation)
+            const navLinks = document.querySelectorAll('.nav-link, .nav-link-mobile');
+            const sections = document.querySelectorAll('section[id]');
+
+            function updateActiveLink(targetId) {
+                navLinks.forEach(link => {
+                    // Reset styling
+                    link.classList.remove('text-[#CCFF02]');
+                    link.classList.add('text-neutral-400');
+                    
+                    const indicator = link.querySelector('.nav-indicator, .nav-indicator-mobile');
+                    if (indicator) {
+                        indicator.classList.remove('opacity-100');
+                        indicator.classList.add('opacity-0');
+                    }
+                    
+                    if (link.getAttribute('href') === `#${targetId}`) {
+                        // Set Active styling
+                        link.classList.remove('text-neutral-400');
+                        link.classList.add('text-[#CCFF02]');
+                        if (indicator) {
+                            indicator.classList.remove('opacity-0');
+                            indicator.classList.add('opacity-100');
+                        }
+                    }
+                });
+            }
+
+            const spyObserverOptions = {
+                root: null,
+                rootMargin: '-50% 0px -50% 0px',
+                threshold: 0
+            };
+
+            const spyObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        updateActiveLink(entry.target.id);
+                    }
+                });
+            }, spyObserverOptions);
+
+            sections.forEach(sec => spyObserver.observe(sec));
+
+            // Extra top-scroll handler for Logo
+            window.addEventListener('scroll', () => {
+                if (window.scrollY < 100) {
+                    updateActiveLink('programs');
+                }
+            });
+
+            // Click behavior for smooth updates
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href').substring(1);
+                    updateActiveLink(targetId);
+                });
+            });
+
+            // Expose scrollToTop to global scope for the logo onClick
+            window.scrollToTop = function() {
+                if (typeof isMenuOpen !== 'undefined' && isMenuOpen) toggleMobileMenu();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                updateActiveLink('programs');
+            };
+        });
+    </script>
+</body>
+
+</html>
