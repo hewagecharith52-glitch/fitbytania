@@ -344,7 +344,7 @@
     </nav>
 
     <!-- Scroll Animation Section (Replaces Hero) -->
-    <div class="scroll-sequence-container pt-20"> <!-- pt-20 to account for navbar initially -->
+    <section id="hero" class="scroll-sequence-container pt-20"> <!-- pt-20 to account for navbar initially -->
         <div class="sticky-canvas-wrapper">
             <canvas id="animation-canvas"></canvas>
             <div
@@ -360,7 +360,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Stats Row -->
     <section class="py-16 bg-surface-gray border-y border-border-gray relative z-20">
@@ -839,7 +839,7 @@
             // Extra top-scroll handler for Logo
             window.addEventListener('scroll', () => {
                 if (window.scrollY < 100) {
-                    updateActiveLink('programs');
+                    updateActiveLink('hero'); // Reset active state to the top
                 }
             });
 
@@ -854,8 +854,15 @@
             // Expose scrollToTop to global scope for the logo onClick
             window.scrollToTop = function() {
                 if (typeof isMenuOpen !== 'undefined' && isMenuOpen) toggleMobileMenu();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                updateActiveLink('programs');
+                
+                const heroSection = document.getElementById('hero');
+                if (heroSection) {
+                    heroSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+                
+                updateActiveLink('hero');
             };
         });
     </script>
